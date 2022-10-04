@@ -10,7 +10,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>de.rytrox.spigot-template</groupId>
+    <groupId>${parent.groupId}.${parent.artifactId}</groupId>
     <artifactId>1.19.2</artifactId>
     <version>${parent.version}</version>
 
@@ -186,7 +186,7 @@
         </dependency>
 
         <dependency>
-            <groupId>de.rytrox.spigot-template</groupId>
+            <groupId>${parent.groupId}.${parent.artifactId}</groupId>
             <artifactId>core</artifactId>
             <version>${parent.version}</version>
         </dependency>
