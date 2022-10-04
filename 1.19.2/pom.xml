@@ -12,7 +12,7 @@
 
     <groupId>de.rytrox.spigot-template</groupId>
     <artifactId>1.19.2</artifactId>
-    <version>1.0-1192-SNAPSHOT</version>
+    <version>${parent.version}</version>
 
     <name>Spigot-Multiversion-Template 1.19.2</name>
 
@@ -188,7 +188,7 @@
         <dependency>
             <groupId>de.rytrox.spigot-template</groupId>
             <artifactId>core</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${parent.version}</version>
         </dependency>
     </dependencies>
 </project>
