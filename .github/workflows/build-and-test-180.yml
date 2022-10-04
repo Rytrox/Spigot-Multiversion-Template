@@ -1,0 +1,27 @@
+name: Test & Build (1.8)
+on:
+  push:
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Set Up JDK 8
+        uses: actions/setup-java@v2
+        with:
+          distribution: 'temurin'
+          java-version: '8'
+          cache: maven
+      - name: Setup Spigot
+        uses: SpraxDev/Action-SpigotMC@v4.0.0
+        with:
+          versions: 1.8.8
+          remapped: false
+          generateSrc: false
+          generateDoc: false
+          disableJavaCheck: false
+          buildToolProvider: SpigotMC
+      - name: Build & Test
+        run: mvn -pl core,1.8 -am clean package
